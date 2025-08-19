@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bizim Masalımız</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #0b0c10, #1f2833, #0b0c10);
+      color: #fff;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      animation: twinkle 20s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes twinkle {
+      from {background-position: 0 0;}
+      to {background-position: 1000px 1000px;}
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffd700;
+      text-shadow: 0 0 15px #ffdf80;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px 30px;
+      font-size: 1.2rem;
+      color: #fff;
+      background: #ff4d6d;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+    }
+
+    button:hover {
+      background: #ff1a4d;
+      box-shadow: 0 0 20px rgba(255, 26, 77, 0.8);
+    }
+
+    footer {
+      margin-top: 30px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <!-- Giriş -->
+  <section id="giris">
+    <h1>🌙 Bizim Masalımız ✨</h1>
+    <p>Bir varmış bir yokmuş... Masalımız şimdi başlıyor.</p>
+    <button onclick="document.getElementById('bolum1').scrollIntoView({behavior:'smooth'});">
+      Masala Başla ➝
+    </button>
+  </section>
+
+  <!-- Bölüm 1 -->
+  <section id="bolum1">
+    <h1>✨ Bölüm 1 ✨</h1>
+    <p>Bir zamanlar, yıldızların arasında kaybolmuş iki kalp vardı...  
+       Onlar birbirini bulduğunda dünya daha güzel bir yer oldu.</p>
+    <button onclick="document.getElementById('bolum2').scrollIntoView({behavior:'smooth'});">
+      Sonraki Bölüm ➝
+    </button>
+  </section>
+
+  <!-- Bölüm 2 -->
+  <section id="bolum2">
+    <h1>🌌 Bölüm 2 🌌</h1>
+    <p>Günler geceleri, geceler rüyalara karıştı.  
+       Her an, birbirlerinin kalbinde saklı bir şiir oldu.</p>
+    <button onclick="document.getElementById('bolum3').scrollIntoView({behavior:'smooth'});">
+      Finale Doğru ➝
+    </button>
+  </section>
+
+  <!-- Bölüm 3 -->
+  <section id="bolum3">
+    <h1>💖 Final 💖</h1>
+    <p>Ve işte masal, sonsuzluğa açılan bir kapı oldu.  
+       Seninle birlikte, bu masal hiç bitmeyecek...  
+       Çünkü gerçek masallar asla bitmez.</p>
+    <button onclick="document.getElementById('giris').scrollIntoView({behavior:'smooth'});">
+      Başa Dön ➝
+    </button>
+    <footer><p>Bu masal hep sürecek... 🌌</p></footer>
+  </section>
+</body>
+</html>
